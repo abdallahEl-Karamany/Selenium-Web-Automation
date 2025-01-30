@@ -14,8 +14,10 @@ This is a work-in-progress web automation framework using Selenium WebDriver wit
 
 ## Current Features
 - Page Object Model implementation
-- Basic login test scenario
+- Basic login page test scenario
 - Automated web interaction with herokuapp.com
+- Forgot password page test scenario
+- drop down page test scenario
 
 ## Setup Requirements
 1. Java JDK 21
