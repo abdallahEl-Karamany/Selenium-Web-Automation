@@ -5,18 +5,26 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage {
     private WebDriver driver;
-    private By formAuthentication= By.xpath("//a[text()='Form Authentication']");
-    private By forgotPassword=By.xpath("//a[text()='Forgot Password']");
+
     public HomePage(WebDriver driver){
         this.driver=driver;
     }
+    private void clickLink(String xpath){
+        driver.findElement(By.xpath(xpath)).click();
+    }
     public LoginPage clickFormAuthentication(){
-        driver.findElement(formAuthentication).click();
+        clickLink("//a[text()='Form Authentication']");
         return new LoginPage(driver);
     }
     public ForgotPasswordPage clickForgotPassword(){
-        driver.findElement(forgotPassword).click();
+        clickLink("//a[text()='Forgot Password']");
         return new ForgotPasswordPage(driver);
     }
+
+    public DropdownPage clickDropdown(){
+        clickLink("//a[text()='Dropdown']");
+        return new DropdownPage(driver);
+    }
+
 
 }
